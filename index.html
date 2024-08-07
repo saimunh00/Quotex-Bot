@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotex Signal Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="home-page">
+        <h1>Welcome to Quotex Signal Bot</h1>
+        <button onclick="goToBot()">Get Started</button>
+    </div>
+    <div id="bot" class="hidden">
+        <h1>Quotex Signal Bot</h1>
+        <div>
+            <label for="market">Select Market:</label>
+            <select id="market">
+                <option value="eur_usd_otc">EUR/USD (OTC)</option>
+                <option value="eur_usd">EUR/USD</option>
+                <option value="eur_jpy_otc">EUR/JPY (OTC)</option>
+                <option value="usd_jpy">USD/JPY</option>
+                <option value="usd_try_otc">USD/TRY (OTC)</option>
+                <option value="usd_bdt_otc">USD/BDT (OTC)</option>
+                <option value="usd_gbp">USD/GBP</option>
+                <option value="usd_mxn_otc">USD/MXN (OTC)</option>
+                <option value="usd_dzd_otc">USD/DZD (OTC)</option>
+                <option value="real_market">Real Market</option>
+            </select>
+        </div>
+        <div>
+            <label for="timeframe">Select Timeframe:</label>
+            <select id="timeframe">
+                <option value="1">1 Minute</option>
+                <option value="2">2 Minutes</option>
+                <option value="3">3 Minutes</option>
+                <option value="4">4 Minutes</option>
+                <option value="5">5 Minutes</option>
+            </select>
+        </div>
+        <div>
+            <label for="timezone">Select Timezone:</label>
+            <select id="timezone">
+                <option value="UTC">UTC</option>
+                <option value="GMT">GMT</option>
+                <option value="EST">EST</option>
+                <option value="CST">CST</option>
+                <option value="MST">MST</option>
+                <option value="PST">PST</option>
+                <option value="IST">IST</option>
+                <option value="BST">BST</option>
+                <option value="AEST">AEST</option>
+            </select>
+        </div>
+        <div id="signal">
+            <p>Waiting for signal...</p>
+        </div>
+        <button id="generate-button" onclick="generateSignal()">Generate Signal</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
