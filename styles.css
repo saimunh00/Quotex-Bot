@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    font-family: 'Roboto', sans-serif;
+}
+
+#home-page, #bot {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    max-width: 400px;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: #2a5298;
+}
+
+label, select {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: #2a5298;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #2a5298;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #2a5298;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #1e3c72;
+}
+
+#generate-button {
+    position: relative;
+    overflow: hidden;
+}
+
+#generate-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.5s;
+}
+
+#generate-button:hover:after {
+    left: 100%;
+}
+
+#signal p {
+    font-size: 18px;
+    color: #2a5298;
+    margin: 0;
+}
+
+@keyframes signalChange {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#signal.animate p {
+    animation: signalChange 0.5s ease-in-out;
+}
+
+@keyframes tradeAnimation {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+#signal p.trade-animation {
+    animation: tradeAnimation 0.5s infinite alternate;
+}
